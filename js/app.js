@@ -19,6 +19,8 @@ const showProducts = (products) => {
       </div>
       <h3>${product.title.slice(0, 40)}</h3>
       <p>Category: ${product.category}</p>
+      <div> <h4>Rating: ${product.rating.rate}</h4></div>
+      <div><h4>Rating Count: ${product.rating.count}</h4></div>
       <h2>Price: ${product.price}</h2>
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
       <button id="details-btn" class="btn btn-danger">Details</button></div>
@@ -70,10 +72,11 @@ const updateTaxAndCharge = () => {
     setInnerText("delivery-charge", 60);
     setInnerText("total-tax", priceConverted * 0.4);
   }
+  updateTotal()
 };
 //grandTotal update function
 const updateTotal = () => {
   const grandTotal = getInputValue("price") + getInputValue("delivery-charge") + getInputValue("total-tax");
 
-    document.getElementById("total").innerText = grandTotal;
+    document.getElementById("total").innerText = grandTotal.toFixed(2);
 };
