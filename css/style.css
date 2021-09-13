@@ -62,16 +62,17 @@ body {
   background-color:rgba(195, 0, 255, 0.048);
   margin-top: 30px;
   margin-right: 20px;
-  height: 480px;
+  height: 520px;
   margin-left:20px ;
+  
+  align-items: center;
+  justify-content: center;
 }
-
-
 
 .single-product:hover {
   box-shadow: 4px 4px 7px rgb(128, 128, 128);
   border-radius: 10px;
-  border: 1px solid rgb(0, 255, 255);
+  border: 1px solid rgb(128, 128, 128);
   cursor: pointer;
 }
 .product-image {
@@ -122,3 +123,4 @@ body {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
